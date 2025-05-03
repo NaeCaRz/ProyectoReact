@@ -23,28 +23,28 @@ function ProductList() {
         id: 1,
         name: "iPhone 15 Pro",
         price: 1299,
-        image: "https://via.placeholder.com/300x300?text=iPhone+15+Pro",
+        image: "https://th.bing.com/th/id/OIP.HUu3Q4iRmr5LizOANhzXbgHaF5?rs=1&pid=ImgDetMain",
         description: "El último iPhone con chip A17 Pro."
       },
       {
         id: 2,
         name: "Samsung Galaxy S24",
         price: 1199,
-        image: "https://via.placeholder.com/300x300?text=Galaxy+S24",
+        image: "https://th.bing.com/th/id/OIP.HUu3Q4iRmr5LizOANhzXbgHaF5?rs=1&pid=ImgDetMain",
         description: "Pantalla AMOLED y cámara de 200MP."
       },
       {
         id: 3,
         name: "Google Pixel 8",
         price: 899,
-        image: "https://via.placeholder.com/300x300?text=Pixel+8",
+        image: "https://wolksoftcr.com/wp-content/uploads/2023/10/google-pixel-8-siete-anos-de-actualizaciones-en-el-pixel-que-abraza-la-ia-como-su-principal-virtud.jpg",
         description: "Android puro con cámara avanzada."
       },
       {
         id: 4,
         name: "OnePlus 12",
         price: 799,
-        image: "https://via.placeholder.com/300x300?text=OnePlus+12",
+        image: "https://th.bing.com/th/id/OIP.HUu3Q4iRmr5LizOANhzXbgHaF5?rs=1&pid=ImgDetMain",
         description: "Rendimiento rápido y carga ultra rápida."
       }
     ];
@@ -57,6 +57,11 @@ function ProductList() {
       if (prevCart.find(item => item.id === product.id)) return prevCart;
       return [...prevCart, product];
     });
+  };
+
+  // Función para quitar producto del carrito
+  const onRemoveFromCart = (productId) => {
+    setCart(prevCart => prevCart.filter(item => item.id !== productId));
   };
 
   // Filtrar productos según búsqueda
@@ -119,7 +124,7 @@ function ProductList() {
         </div>
       )}
 
-      {/* Resumen del carrito */}
+      {/* Resumen del carrito con botón para quitar */}
       <div className="cart-summary">
         <h3>Carrito ({cart.length} {cart.length === 1 ? 'producto' : 'productos'})</h3>
         {cart.length === 0 ? (
@@ -127,7 +132,16 @@ function ProductList() {
         ) : (
           <ul>
             {cart.map(item => (
-              <li key={item.id}>{item.name} - ${item.price}</li>
+              <li key={item.id}>
+                {item.name} - ${item.price}{' '}
+                <button 
+                  onClick={() => onRemoveFromCart(item.id)} 
+                  aria-label={`Quitar ${item.name} del carrito`}
+                  className="remove-btn"
+                >
+                  ✖
+                </button>
+              </li>
             ))}
           </ul>
         )}
@@ -137,4 +151,5 @@ function ProductList() {
 }
 
 export default ProductList;
+
 

@@ -13,12 +13,13 @@ function ProductCard({ product, onAddToCart }) {
       whileHover={{ scale: 1.05, boxShadow: '0 8px 20px rgba(0,0,0,0.15)' }}
       transition={{ duration: 0.3 }}
     >
-      <img 
-        src={product.image} 
-        alt={product.name} 
-        className="product-image"
-        loading="lazy"
-      />
+     <img 
+  src={product.image} 
+  alt={product.name} 
+  className="product-image"
+  loading="lazy"
+/>
+
       <div className="product-info">
         <h3 className="product-name">{product.name}</h3>
         <p className="product-description">{product.description}</p>
