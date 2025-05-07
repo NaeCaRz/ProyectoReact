@@ -25,81 +25,81 @@ function ProductList() {
   const productsPerPage = 3; // Productos por página
 
   // Cargar productos (simulado)
+  const mockProducts: Product[] = [
+    {
+      id: 1,
+      name: "iPhone 15 Pro",
+      price: 1299,
+      imgUrl: "https://th.bing.com/th/id/OIP.HUu3Q4iRmr5LizOANhzXbgHaF5?rs=1&pid=ImgDetMain",
+      description: "El último iPhone con chip A17 Pro."
+    },
+    {
+      id: 2,
+      name: "Samsung Galaxy S24",
+      price: 1199,
+      imgUrl: "https://th.bing.com/th/id/OIP.HUu3Q4iRmr5LizOANhzXbgHaF5?rs=1&pid=ImgDetMain",
+      description: "Pantalla AMOLED y cámara de 200MP."
+    },
+    {
+      id: 3,
+      name: "Google Pixel 8",
+      price: 899,
+      imgUrl: "https://wolksoftcr.com/wp-content/uploads/2023/10/google-pixel-8-siete-anos-de-actualizaciones-en-el-pixel-que-abraza-la-ia-como-su-principal-virtud.jpg",
+      description: "Android puro con cámara avanzada."
+    },
+    {
+      id: 4,
+      name: "OnePlus 12",
+      price: 799,
+      imgUrl: "https://th.bing.com/th/id/OIP.HUu3Q4iRmr5LizOANhzXbgHaF5?rs=1&pid=ImgDetMain",
+      description: "Rendimiento rápido y carga ultra rápida."
+    },
+    {
+      id: 5,
+      name: "OnePlus 12",
+      price: 799,
+      imgUrl: "https://th.bing.com/th/id/OIP.HUu3Q4iRmr5LizOANhzXbgHaF5?rs=1&pid=ImgDetMain",
+      description: "Rendimiento rápido y carga ultra rápida."
+    },
+    {
+      id: 6,
+      name: "OnePlus 12",
+      price: 799,
+      imgUrl: "https://th.bing.com/th/id/OIP.HUu3Q4iRmr5LizOANhzXbgHaF5?rs=1&pid=ImgDetMain",
+      description: "Rendimiento rápido y carga ultra rápida."
+    },
+    {
+      id: 67,
+      name: "OnePlus 12",
+      price: 799,
+      imgUrl: "https://th.bing.com/th/id/OIP.HUu3Q4iRmr5LizOANhzXbgHaF5?rs=1&pid=ImgDetMain",
+      description: "Rendimiento rápido y carga ultra rápida."
+    },
+    {
+      id: 8,
+      name: "OnePlus 12",
+      price: 799,
+      imgUrl: "https://th.bing.com/th/id/OIP.HUu3Q4iRmr5LizOANhzXbgHaF5?rs=1&pid=ImgDetMain",
+      description: "Rendimiento rápido y carga ultra rápida."
+    },
+    {
+      id: 9,
+      name: "OnePlus 12",
+      price: 799,
+      imgUrl: "https://th.bing.com/th/id/OIP.HUu3Q4iRmr5LizOANhzXbgHaF5?rs=1&pid=ImgDetMain",
+      description: "Rendimiento rápido y carga ultra rápida."
+    },
+    {
+      id: 10,
+      name: "OnePlus 12",
+      price: 799,
+      imgUrl: "https://th.bing.com/th/id/OIP.HUu3Q4iRmr5LizOANhzXbgHaF5?rs=1&pid=ImgDetMain",
+      description: "Rendimiento rápido y carga ultra rápida."
+    }
+    
+  ];
 
   useEffect(() => {
-    const mockProducts: Product[] = [
-      {
-        id: 1,
-        name: "iPhone 15 Pro",
-        price: 1299,
-        imgUrl: "https://th.bing.com/th/id/OIP.HUu3Q4iRmr5LizOANhzXbgHaF5?rs=1&pid=ImgDetMain",
-        description: "El último iPhone con chip A17 Pro."
-      },
-      {
-        id: 2,
-        name: "Samsung Galaxy S24",
-        price: 1199,
-        imgUrl: "https://th.bing.com/th/id/OIP.HUu3Q4iRmr5LizOANhzXbgHaF5?rs=1&pid=ImgDetMain",
-        description: "Pantalla AMOLED y cámara de 200MP."
-      },
-      {
-        id: 3,
-        name: "Google Pixel 8",
-        price: 899,
-        imgUrl: "https://wolksoftcr.com/wp-content/uploads/2023/10/google-pixel-8-siete-anos-de-actualizaciones-en-el-pixel-que-abraza-la-ia-como-su-principal-virtud.jpg",
-        description: "Android puro con cámara avanzada."
-      },
-      {
-        id: 4,
-        name: "OnePlus 12",
-        price: 799,
-        imgUrl: "https://th.bing.com/th/id/OIP.HUu3Q4iRmr5LizOANhzXbgHaF5?rs=1&pid=ImgDetMain",
-        description: "Rendimiento rápido y carga ultra rápida."
-      },
-      {
-        id: 5,
-        name: "OnePlus 12",
-        price: 799,
-        imgUrl: "https://th.bing.com/th/id/OIP.HUu3Q4iRmr5LizOANhzXbgHaF5?rs=1&pid=ImgDetMain",
-        description: "Rendimiento rápido y carga ultra rápida."
-      },
-      {
-        id: 6,
-        name: "OnePlus 12",
-        price: 799,
-        imgUrl: "https://th.bing.com/th/id/OIP.HUu3Q4iRmr5LizOANhzXbgHaF5?rs=1&pid=ImgDetMain",
-        description: "Rendimiento rápido y carga ultra rápida."
-      },
-      {
-        id: 67,
-        name: "OnePlus 12",
-        price: 799,
-        imgUrl: "https://th.bing.com/th/id/OIP.HUu3Q4iRmr5LizOANhzXbgHaF5?rs=1&pid=ImgDetMain",
-        description: "Rendimiento rápido y carga ultra rápida."
-      },
-      {
-        id: 8,
-        name: "OnePlus 12",
-        price: 799,
-        imgUrl: "https://th.bing.com/th/id/OIP.HUu3Q4iRmr5LizOANhzXbgHaF5?rs=1&pid=ImgDetMain",
-        description: "Rendimiento rápido y carga ultra rápida."
-      },
-      {
-        id: 9,
-        name: "OnePlus 12",
-        price: 799,
-        imgUrl: "https://th.bing.com/th/id/OIP.HUu3Q4iRmr5LizOANhzXbgHaF5?rs=1&pid=ImgDetMain",
-        description: "Rendimiento rápido y carga ultra rápida."
-      },
-      {
-        id: 10,
-        name: "OnePlus 12",
-        price: 799,
-        imgUrl: "https://th.bing.com/th/id/OIP.HUu3Q4iRmr5LizOANhzXbgHaF5?rs=1&pid=ImgDetMain",
-        description: "Rendimiento rápido y carga ultra rápida."
-      }
-      
-    ];
     setProducts(mockProducts);
   }, []);
 

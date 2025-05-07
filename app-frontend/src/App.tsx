@@ -1,19 +1,16 @@
-import {ProductList} from "./components";
+import { ReactNode } from "react";
 import "./App.css"
 
-function App() {
+interface Props {
+  children: ReactNode
+}
+
+
+function App({children}: Props) {
   return (
-    <div className="app-container">
-      <header>
-        <h1>Tienda Virtual de Tecnología Móvil</h1>
-      </header>
-      <main>
-        <ProductList />
-      </main>
-      <footer>
-        <p>© 2025 Mi Tienda Virtual. Todos los derechos reservados.</p>
-      </footer>
-    </div>
+    <>
+      {children}
+    </>
   );
 }
 
