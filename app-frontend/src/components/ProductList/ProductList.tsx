@@ -22,7 +22,7 @@ function ProductList() {
 
   // Estado para paginación
   const [currentPage, setCurrentPage] = useState(1);
-  const productsPerPage = 2; // Productos por página
+  const productsPerPage = 3; // Productos por página
 
   // Cargar productos (simulado)
 
@@ -55,7 +55,50 @@ function ProductList() {
         price: 799,
         imgUrl: "https://th.bing.com/th/id/OIP.HUu3Q4iRmr5LizOANhzXbgHaF5?rs=1&pid=ImgDetMain",
         description: "Rendimiento rápido y carga ultra rápida."
+      },
+      {
+        id: 5,
+        name: "OnePlus 12",
+        price: 799,
+        imgUrl: "https://th.bing.com/th/id/OIP.HUu3Q4iRmr5LizOANhzXbgHaF5?rs=1&pid=ImgDetMain",
+        description: "Rendimiento rápido y carga ultra rápida."
+      },
+      {
+        id: 6,
+        name: "OnePlus 12",
+        price: 799,
+        imgUrl: "https://th.bing.com/th/id/OIP.HUu3Q4iRmr5LizOANhzXbgHaF5?rs=1&pid=ImgDetMain",
+        description: "Rendimiento rápido y carga ultra rápida."
+      },
+      {
+        id: 67,
+        name: "OnePlus 12",
+        price: 799,
+        imgUrl: "https://th.bing.com/th/id/OIP.HUu3Q4iRmr5LizOANhzXbgHaF5?rs=1&pid=ImgDetMain",
+        description: "Rendimiento rápido y carga ultra rápida."
+      },
+      {
+        id: 8,
+        name: "OnePlus 12",
+        price: 799,
+        imgUrl: "https://th.bing.com/th/id/OIP.HUu3Q4iRmr5LizOANhzXbgHaF5?rs=1&pid=ImgDetMain",
+        description: "Rendimiento rápido y carga ultra rápida."
+      },
+      {
+        id: 9,
+        name: "OnePlus 12",
+        price: 799,
+        imgUrl: "https://th.bing.com/th/id/OIP.HUu3Q4iRmr5LizOANhzXbgHaF5?rs=1&pid=ImgDetMain",
+        description: "Rendimiento rápido y carga ultra rápida."
+      },
+      {
+        id: 10,
+        name: "OnePlus 12",
+        price: 799,
+        imgUrl: "https://th.bing.com/th/id/OIP.HUu3Q4iRmr5LizOANhzXbgHaF5?rs=1&pid=ImgDetMain",
+        description: "Rendimiento rápido y carga ultra rápida."
       }
+      
     ];
     setProducts(mockProducts);
   }, []);
