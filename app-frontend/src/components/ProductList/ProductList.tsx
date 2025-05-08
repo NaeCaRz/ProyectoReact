@@ -22,7 +22,7 @@ function ProductList() {
 
   // Estado para paginación
   const [currentPage, setCurrentPage] = useState(1);
-  const productsPerPage = 3; // Productos por página
+  const productsPerPage = 2; // Productos por página
 
   // Cargar productos (simulado)
   const mockProducts: Product[] = [

@@ -1,5 +1,4 @@
 .product-card {
-  width: 350px;
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -18,9 +17,9 @@
 }
 
 .product-image {
-  width: 350px;
-  height: 350px; /* Mantiene la proporción natural */
-  display: flex;
+  width: 100%;
+  height: auto; /* Mantiene la proporción natural */
+  display: block;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
 }
